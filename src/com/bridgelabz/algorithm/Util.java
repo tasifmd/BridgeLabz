@@ -15,7 +15,7 @@ public class Util {
 	  * @param y : passing year as argument
 	  * @return date
 	  **/
-	static int dayOfWeek(int d, int m, int y) {
+	public static int dayOfWeek(int d, int m, int y) {
 		int y0 = y - (14 - m) / 12;
 		int x = y0 + y0 / 4 - y0 / 100 + y0 / 400;
 		int m0 = m + 12 * ((14 - m) / 12) - 2;
@@ -30,7 +30,7 @@ public class Util {
 	  * @return converted temperature
 	  **/
 	
-	static double temperaturConversion(double tem, String t) {
+	public static double temperaturConversion(double tem, String t) {
 		double con;
 		if (t.equals("c") || t.equals("C")) {
 			con = (tem * 9 / 5) + 32;
@@ -51,7 +51,7 @@ public class Util {
 	  * @return payment
 	  **/
 	
-	static double monthlyPayment(double P, int Y, double R) {
+	public static double monthlyPayment(double P, int Y, double R) {
 		double n = 12 * Y;
 		double r = R / (12 * 100);
 		double payment = P * r / (1 - Math.pow((1 + r), -n));
@@ -64,7 +64,7 @@ public class Util {
 	  * @return square root of number 
 	  **/
 	
-	static double sqrt(double c) {
+	public static double sqrt(double c) {
 
 		double t = c;
 		double epsilon = 1e-15;
@@ -76,4 +76,61 @@ public class Util {
 		
 	}
 	
+	/**
+	 * Purpose : function to convert integer to binary
+	 * @param number : passing integer as an argument to be converted to binary
+	 * @returns string representing binary of number
+	 **/
+	public static String toBinary(int number) {
+		if(number == 1) {
+			return String.valueOf(number);
+		}
+		int remainder = number % 2;
+		return toBinary(number / 2) + String.valueOf(remainder);
+	}
+	
+	/**
+	 * Purpose : converts binary number to decimal.
+	 * @param binary : passing binary as an argument to be converted to integer
+	 * @return integer type value 
+	 **/
+	public static int binaryToInteger(int binary) {
+		String binaryString = String.valueOf(binary);
+		int number = 0;
+		for (int index = 0; index < binaryString.length(); index++) {
+			int tempDigit = binaryString.charAt(index) - '0';
+			number = number * 2 + tempDigit; 
+		}
+		return number;
+	}
+	/**
+	 * Purpose : Swap nibbles and find the new number
+	 * @param binaryString
+	 * @return
+	 **/
+	public static int swapNibbles(String binaryString) {
+		int size = binaryString.length();
+		for(int i = 0; i < 8 - size; i++) {
+			binaryString = "0" + binaryString;
+		}
+		String nibble1 = binaryString.substring(0, 4);
+		String nibble2 = binaryString.substring(4);
+		return Integer.parseInt(nibble2 + nibble1);
+	}
+	
+	/**
+	 * Purpose : Find the resultant number is the number is a power of 2 or not 
+	 * @param binary : passing binary as an argument to be checked for 
+	 * @return true if it is power of 2 else false 
+	 **/
+	public static boolean isPowerOfTwo(int binary) {
+		String binaryString = String.valueOf(binary);
+		
+		for (int index = 1; index < binaryString.length(); index++) {
+			if(binaryString.charAt(index) != '0') {
+				return false;
+			}
+		}
+		return true;
+	}
 }
