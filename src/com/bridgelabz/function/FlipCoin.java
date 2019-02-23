@@ -1,3 +1,5 @@
+package com.bridgelabz.function;
+import com.bridgelabz.utility.*;
 /**
  *  Purpose: Flip Coin and print percentage of Heads and Tails
  *
@@ -6,8 +8,6 @@
  *  @since   18-02-2019
  *
  **/
-package com.bridgelabz.function;
-import com.bridgelabz.utility.*;
 
 public class FlipCoin {
 	/**

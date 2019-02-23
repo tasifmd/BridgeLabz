@@ -1,3 +1,5 @@
+package com.bridgelabz.algorithm;
+import com.bridgelabz.utility.*;
 /**
  *  Purpose: Main Class that access all static methods Util Class
  *
@@ -6,9 +8,6 @@
  *  @since   21-02-2019
  *
  **/
-
-package com.bridgelabz.algorithm;
-import com.bridgelabz.utility.*;
 public class SearchMain {
 	public static void main(String[] args) {
 		System.out.println("Enter the size of Array ");

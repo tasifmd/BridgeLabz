@@ -1,5 +1,5 @@
+package com.bridgelabz.algorithm;
 /**
- *  Compilation:  javac -d bin UtilitySearch.java
  *  Purpose: Utility class that contains all static methods
  *
  *  @author  Tasif Mohammed
@@ -7,8 +7,6 @@
  *  @since   21-02-2019
  *
  **/
-package com.bridgelabz.algorithm;
-
 public class UtilitySearch {
 	
 	/**

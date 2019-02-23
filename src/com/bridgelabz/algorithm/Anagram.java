@@ -1,3 +1,6 @@
+package com.bridgelabz.algorithm;
+import com.bridgelabz.utility.*;
+import java.util.*;
 /**
  *  Purpose: One string is an anagram of another if the second is simply a rearrangement of the first. For example, 'heart' and 'earth' are anagrams
  *
@@ -6,9 +9,6 @@
  *  @since   21-02-2019
  *
  **/
-package com.bridgelabz.algorithm;
-import com.bridgelabz.utility.*;
-import java.util.*;
 public class Anagram {
 
 	public static void main(String[] args) {

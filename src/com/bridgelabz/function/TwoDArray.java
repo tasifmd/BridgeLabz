@@ -1,3 +1,6 @@
+package com.bridgelabz.function;
+import com.bridgelabz.utility.*;
+import java.io.*;
 /**
  *  Purpose: A library for reading in 2D arrays of integers, doubles, or booleans from standard input and printing them out to standard output
  *
@@ -6,10 +9,6 @@
  *  @since   19-02-2019
  *
  **/
-package com.bridgelabz.function;
-import com.bridgelabz.utility.*;
-import java.io.*;
-
 public class TwoDArray {
 	/**
 	  * The main function is written to read 2D Array and print it

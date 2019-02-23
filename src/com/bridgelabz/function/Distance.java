@@ -1,3 +1,4 @@
+package com.bridgelabz.function;
 /**
  *  Purpose: takes two integer command-line arguments x and y and prints the Euclidean distance from the point (x, y) to the origin (0, 0).
  *
@@ -6,8 +7,6 @@
  *  @since   19-02-2019
  *
  **/
-package com.bridgelabz.function;
-
 public class Distance {
 
 	public static void main(String[] args) {

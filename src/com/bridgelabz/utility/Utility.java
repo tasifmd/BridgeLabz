@@ -1,3 +1,5 @@
+package com.bridgelabz.utility;
+import java.util.*;
 /**
  *  Compilation:  javac -d bin Utility.java
  *  Purpose: Root class Scanner to reuse in other program .
@@ -7,10 +9,6 @@
  *  @since   18-02-2019
  *
  **/
-package com.bridgelabz.utility;
-
-import java.util.*;
-
 public class Utility {
 	
 	//Creation of Scanner Object

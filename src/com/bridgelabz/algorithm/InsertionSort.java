@@ -1,3 +1,5 @@
+package com.bridgelabz.algorithm;
+import com.bridgelabz.utility.*;
 /**
  * Purpose : Reads in strings from standard input and prints them in sorted order. Uses insertion sort.
  * 
@@ -5,8 +7,6 @@
  *  @version 1.0
  *  @since   22-02-2019
  **/
-package com.bridgelabz.algorithm;
-import com.bridgelabz.utility.*;
 public class InsertionSort {
 
 	public static void main(String[] args) {

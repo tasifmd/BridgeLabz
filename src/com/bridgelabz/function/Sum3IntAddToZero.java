@@ -1,3 +1,5 @@
+package com.bridgelabz.function;
+import com.bridgelabz.utility.*;
 /**
  *  Purpose: A program with cubic running time. Read in N integers and counts the number of triples that sum to exactly 0
  *
@@ -6,9 +8,6 @@
  *  @since   19-02-2019
  *
  **/
-package com.bridgelabz.function;
-import com.bridgelabz.utility.*;
-
 public class Sum3IntAddToZero {
 	
 	/**

@@ -1,3 +1,4 @@
+package com.bridgelabz.algorithm;
 /**
  *  Purpose: One Util class that contains some static function
  *
@@ -6,8 +7,6 @@
  *  @since   21-02-2019
  *
  **/
-package com.bridgelabz.algorithm;
-
 public class Util {
 	/**
 	  * Purpose: takes a date as input and prints the day of the week that date falls on

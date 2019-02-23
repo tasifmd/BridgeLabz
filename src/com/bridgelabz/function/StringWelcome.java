@@ -1,3 +1,5 @@
+package com.bridgelabz.function;
+import com.bridgelabz.utility.*;
 /**
  *  Purpose: Take User Name as Input Replace <<UserName>> with the proper name Print the String with User Name.
  *
@@ -6,9 +8,6 @@
  *  @since   18-02-2019
  *
  **/
-package com.bridgelabz.function;
-import com.bridgelabz.utility.*;
-
 public class StringWelcome {
 	/**
 	  * The main function is written to test User name and display message

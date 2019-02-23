@@ -1,3 +1,5 @@
+package com.bridgelabz.function;
+import com.bridgelabz.utility.*;
 /**
  *  Purpose: takes two double command-line arguments t and v and prints the wind chill. Use Math.pow(a, b) to compute ab
  *
@@ -6,9 +8,6 @@
  *  @since   20-02-2019
  *
  **/
-package com.bridgelabz.function;
-import com.bridgelabz.utility.*;
-
 public class WindChill {
 
 	public static void main(String[] args) {

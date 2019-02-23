@@ -1,3 +1,5 @@
+package com.bridgelabz.algorithm;
+import com.bridgelabz.utility.*;
 /**
  * Purpose : to calculate the minimum number of Notes as well as the Notes to be returned by the Vending Machine as a Change
  * 
@@ -5,10 +7,6 @@
  *  @version 1.0
  *  @since   22-02-2019
  **/
-
-package com.bridgelabz.algorithm;
-import com.bridgelabz.utility.*;
-
 public class VendingMachine {
 	
 	static int i,total; 

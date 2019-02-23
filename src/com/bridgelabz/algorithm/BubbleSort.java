@@ -1,3 +1,6 @@
+
+package com.bridgelabz.algorithm;
+import com.bridgelabz.utility.*;
 /**
  * Purpose : Reads in integers prints them in sorted order using Bubble Sort
  * 
@@ -5,8 +8,6 @@
  *  @version 1.0
  *  @since   22-02-2019
  **/
-package com.bridgelabz.algorithm;
-import com.bridgelabz.utility.*;
 public class BubbleSort {
 
 	public static void main(String[] args) {

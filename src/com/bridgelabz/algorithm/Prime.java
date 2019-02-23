@@ -1,3 +1,5 @@
+package com.bridgelabz.algorithm;
+import com.bridgelabz.utility.*;
 /**
  *  Purpose: Take a range of Numbers and find the Prime numbers in that range
  *
@@ -6,9 +8,6 @@
  *  @since   21-02-2019
  *
  **/
-package com.bridgelabz.algorithm;
-import com.bridgelabz.utility.*;
-
 public class Prime {
 
 	public static void main(String[] args) {

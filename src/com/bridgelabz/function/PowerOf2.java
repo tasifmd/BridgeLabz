@@ -1,3 +1,5 @@
+package com.bridgelabz.function;
+import com.bridgelabz.utility.*;
 /**
  *  Purpose: Takes an input N and prints a table of the powers of 2 that are less than or equal to 2^N.
  *
@@ -6,9 +8,6 @@
  *  @since   18-02-2019
  *
  **/
-package com.bridgelabz.function;
-import com.bridgelabz.utility.*;
-
 public class PowerOf2 {
 	
 	/**

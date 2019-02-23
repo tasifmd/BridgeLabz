@@ -1,3 +1,7 @@
+package com.bridgelabz.algorithm;
+import java.io.*;
+import java.util.*;
+import com.bridgelabz.utility.*;
 /**
  * Purpose : Read in a list of words from File. Then prompt the user to enter a word to search the list. The program reports if the search word is found in the list
  * 
@@ -5,10 +9,6 @@
  *  @version 1.0
  *  @since   22-02-2019
  **/
-package com.bridgelabz.algorithm;
-import java.io.*;
-import java.util.*;
-import com.bridgelabz.utility.*;
 public class WordSearch {
 
 	public static void main(String[] args) {

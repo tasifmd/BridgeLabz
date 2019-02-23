@@ -1,3 +1,5 @@
+package com.bridgelabz.algorithm;
+import com.bridgelabz.utility.Utility;
 /**
  * Purpose:  takes a command-line argument N, asks you to think of a number between 0 and N-1, where N = 2^n, and always guesses the answer with n questions
  * 
@@ -5,10 +7,6 @@
  *  @version 1.0
  *  @since   21-02-2019
  **/
-package com.bridgelabz.algorithm;
-
-import com.bridgelabz.utility.Utility;
-
 public class GuessAnswer {
 	
 	/**

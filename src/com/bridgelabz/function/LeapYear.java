@@ -1,3 +1,5 @@
+package com.bridgelabz.function;
+import com.bridgelabz.utility.*;
 /**
  *  Purpose: Check wheather year is leap year or not
  *
@@ -6,10 +8,6 @@
  *  @since   18-02-2019
  *
  **/
-
-package com.bridgelabz.function;
-import com.bridgelabz.utility.*;
-
 public class LeapYear {
 	
 	/**

@@ -1,13 +1,13 @@
-/**
- *  Purpose: Print the Nth harmonic number: 1/1 + 1/2 + ... + 1/N
- *
- *  @author  Tasif Mohammed
- *  @version 1.0
- *  @since   18-02-2019
- *
- **/
 package com.bridgelabz.function;
 import com.bridgelabz.utility.*;
+/**
+*  Purpose: Print the Nth harmonic number: 1/1 + 1/2 + ... + 1/N
+*
+*  @author  Tasif Mohammed
+*  @version 1.0
+*  @since   18-02-2019
+*
+**/
 
 public class HarmonicNumbers {
 	

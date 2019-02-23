@@ -1,3 +1,5 @@
+package com.bridgelabz.function;
+import com.bridgelabz.utility.*;
 /**
  *  Purpose: find the roots of the equation a*x*x + b*x + c
  *
@@ -6,8 +8,6 @@
  *  @since   20-02-2019
  *
  **/
-package com.bridgelabz.function;
-import com.bridgelabz.utility.*;
 
 public class Quadratic {
 
@@ -27,10 +27,6 @@ public class Quadratic {
 		    root2 = (-b - Math.sqrt(delta))/(2*a);
 		    System.out.println("First root is:"+root1);
 		    System.out.println("Second root is:"+root2);
-		}else if(delta == 0){
-		    System.out.println("Roots are real and equal");
-		    root1 = (-b+Math.sqrt(delta))/(2*a);
-		    System.out.println("Root:"+root1);
 		}else{
 		    System.out.println("Roots are imaginary");
 		}

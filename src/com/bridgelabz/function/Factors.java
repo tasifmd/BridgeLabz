@@ -1,3 +1,5 @@
+package com.bridgelabz.function;
+import com.bridgelabz.utility.*;
 /**
  *  Purpose: Computes the prime factorization of N using brute force.
  *
@@ -5,9 +7,7 @@
  *  @version 1.0
  *  @since   18-02-2019
  *
- **/package com.bridgelabz.function;
-import com.bridgelabz.utility.*;
-
+ **/
 public class Factors {
 	
 	/**

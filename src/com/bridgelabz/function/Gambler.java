@@ -1,3 +1,5 @@
+package com.bridgelabz.function;
+import com.bridgelabz.utility.*;
 /**
  *  Purpose: Print Number of Wins and Percentage of Win and Loss of Gambler 
  *
@@ -6,9 +8,6 @@
  *  @since   19-02-2019
  *
  **/
-package com.bridgelabz.function;
-import com.bridgelabz.utility.*;
-
 public class Gambler {
 	
 	/**
