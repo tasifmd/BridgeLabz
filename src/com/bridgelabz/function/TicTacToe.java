@@ -2,6 +2,12 @@ package com.bridgelabz.function;
 import java.util.Random;
 import com.bridgelabz.utility.Utility;
 
+/**
+ * Purpose : Program to play a Cross Game or Tic-Tac-Toe Game
+ * @author tasif Mohammed
+ * @version 1.0
+ * @since 20-02-2019
+ **/
 public class TicTacToe {
 
 	public static void main(String[] args) {
@@ -9,6 +15,12 @@ public class TicTacToe {
 		System.out.println("Status of Game is "+status);
 	}
 	
+	/**
+	 * Purpose : function to initialize board
+	 * @return You Won if user owns
+	 * @return Computer Won if you loose
+	 * @return Game Draw  if the game draws
+	 **/
 	public static String ticTacToe() {
 		boolean user = false;
 		int arr[][] = new int[3][3];
@@ -40,6 +52,10 @@ public class TicTacToe {
 		return "Game Draw ";
 	}
 	
+	/**
+	 * Purpose : function to take users turn
+	 * @param arr as argument to allocate one box board 
+	 **/
 	public static void userTurn(int[][] arr) {
 		System.out.println("Your Turn....");
 		System.out.println("Enter Position");
@@ -54,6 +70,13 @@ public class TicTacToe {
 		}
 	}
 	
+	/**
+	 * Purpose : Validating whether the arr[row][col] is already allocated or not 
+	 * @param arr : Passing array as argument
+	 * @param row : Passing row as argument
+	 * @param cols : Passing col as argument
+	 * @return
+	 **/
 	private static boolean isValidTurn(int[][] arr, int row, int cols) {
 		if (arr[row][cols] == -1) {
 			return true;
@@ -61,6 +84,10 @@ public class TicTacToe {
 		return false;
 	}
 	
+	/**
+	 * Purpose : function to print the board
+	 * @param arr as an argument
+	 */
 	private static void printGameArray(int[][] arr) {
 		for (int i = 0; i < 3; i++) {
 			for (int j = 0; j < 3; j++) {
@@ -76,30 +103,40 @@ public class TicTacToe {
 			System.out.println("===============");
 		}
 	}
-	private static void computerTurn(int[][] gameArray) {
+	/**
+	 * Purpose : Randomly allocating cells of board
+	 * @param arr : Passing array as a argument
+	 **/
+	private static void computerTurn(int[][] arr) {
 
 		Random random = new Random();
 		int row = random.nextInt(3);
 		int cols = random.nextInt(3);
-		if (isValidTurn(gameArray, row, cols)) {
-			gameArray[row][cols] = 1;
+		if (isValidTurn(arr, row, cols)) {
+			arr[row][cols] = 1;
 		} else {
-			computerTurn(gameArray);
+			computerTurn(arr);
 		}
 	}
-	private static boolean checkWin(int[][] gameArray, int i) {
+	/**
+	 * Purpose : function to check who owns the game
+	 * @param arr : passing array as parameter 
+	 * @param i : passing i 0 for user 1 for computer 
+	 * @return true if user wins else false 
+	 **/
+	private static boolean checkWin(int[][] arr, int i) {
 		for (int j = 0; j < 3; j++) {
-			if (gameArray[j][0] == i && gameArray[j][1] == i && gameArray[j][2] == i) {
+			if (arr[j][0] == i && arr[j][1] == i && arr[j][2] == i) {
 				return true;
 			}
-			if (gameArray[0][j] == i && gameArray[1][j] == i && gameArray[2][j] == i) {
+			if (arr[0][j] == i && arr[1][j] == i && arr[2][j] == i) {
 				return true;
 			}
 		}
-		if (gameArray[0][0] == i && gameArray[1][1] == i && gameArray[2][2] == i) {
+		if (arr[0][0] == i && arr[1][1] == i && arr[2][2] == i) {
 			return true;
 		}
-		if (gameArray[0][2] == i && gameArray[1][1] == i && gameArray[2][0] == i) {
+		if (arr[0][2] == i && arr[1][1] == i && arr[2][0] == i) {
 			return true;
 		}
 		return false;
