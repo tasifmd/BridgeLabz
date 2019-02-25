@@ -20,9 +20,12 @@ public class HarmonicNumbers {
 		int n=Utility.inputInteger();
 		double res=0.0;
 		int i=0;
-		for(i=1;i<=n;i++){
+		for(i=1;i<n;i++){
 			res=res+(double)1/i;
-			System.out.print(res+" ");
+			System.out.print("1/"+i+"  +  ");
+		}
+		if(i==n) {
+			System.out.print("1/"+i);
 		}
 		System.out.println();
 		System.out.println("Nth Harmonic value is " + res);
