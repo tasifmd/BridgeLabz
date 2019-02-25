@@ -123,6 +123,7 @@ public class Util {
 	 * @param binary : passing binary as an argument to be checked for 
 	 * @return true if it is power of 2 else false 
 	 **/
+	
 	public static boolean isPowerOfTwo(int binary) {
 		String binaryString = String.valueOf(binary);
 		
@@ -132,5 +133,23 @@ public class Util {
 			}
 		}
 		return true;
+	}
+	
+	/**
+	 * Purpose : static functions to return all permutation of a String
+	 * @param first : passing String as argument 
+	 * @param last : passing String as argument 
+	 **/
+	public void permute(String first, String last) {
+		int size = last.length();
+		if (size == 0) {
+			System.out.println(first);
+		} else {
+			for (int i = 0; i < size; i++) {
+				String myFirst = first + last.charAt(i);
+				String myLast = last.substring(0, i) + last.substring(i + 1 , size);
+				permute(myFirst, myLast);
+			}
+		}
 	}
 }
