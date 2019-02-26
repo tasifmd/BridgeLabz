@@ -94,19 +94,53 @@ public class Utility {
 		sc.close();
 	}
 	
+	/**
+	 * Purpose : Function to read data from a file 
+	 * @param filename : Passing file location as an argument
+	 * @return : data of file as a string 
+	 * @throws IOException
+	 */
 	public static String readFile(String filename) throws IOException{
+		
+		//Creating FileReader Object
+		
 		FileReader fileReader = new FileReader(filename);
+		
+		//Creating BufferedReader Object
+		
 		BufferedReader bufferedreader = new BufferedReader(fileReader);
 		String line;
+		
+		//Creating StringBuilder Object
+		
 		StringBuilder sb = new StringBuilder();
 		while ((line = bufferedreader.readLine()) != null){
+			
+			//Appending line by line 
+			
 			sb.append(line);
 		}
 		System.out.println(sb);
+		
+		//closing the FileReader object
+		
 		fileReader.close();
+		
+		//closing the BufferedReader object
+		
 		bufferedreader.close();
+		
+		//Returning the String 
+		
 		return sb.toString();
 	}
+	
+	/**
+	 * Purpose : Function to write data into the file 
+	 * @param filename : Passing file name as an argument
+	 * @param items : Passing List items as an argument
+	 * @throws IOException : That is checked exception
+	 */
 	
 	public static void writeFile(String filename,List<String> items) throws IOException{
 		FileWriter filewriter = new FileWriter(filename);
@@ -117,6 +151,12 @@ public class Utility {
 		bw.close();
 		filewriter.close();
 	}
+	
+	/**
+	 * Purpose : Function to convert array to List
+	 * @param array : Passing array as an argument
+	 * @return : Return the list 
+	 */
 	
 	public static List<Object> arrayToList(Object[] array) {
 		List<Object> list = new LinkedList<Object>();
