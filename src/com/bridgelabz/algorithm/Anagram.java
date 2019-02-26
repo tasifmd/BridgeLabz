@@ -16,7 +16,7 @@ public class Anagram {
 		String str1=Utility.inputString();
 		System.out.println("Enter the secound string");
 		String str2=Utility.inputString();
-		boolean b = anagram(str1,str2);
+		boolean b = isAnagram(str1,str2);
 		if(b) {
 			System.out.println("String is Anagram");
 		}
@@ -36,7 +36,9 @@ public class Anagram {
 	  *@return true if strings are anagram else false
 	  **/
 	
-	private static boolean anagram(String s1, String s2) {
+	private static boolean isAnagram(String s1, String s2) {
+		s1 = s1.replaceAll(" ", "");
+		s2 = s2.replaceAll(" ", "");
 		if(s1.length()!=s2.length()) {
 			return false;
 		}

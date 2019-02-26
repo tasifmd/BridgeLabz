@@ -1,4 +1,5 @@
 package com.bridgelabz.utility;
+import java.io.*;
 import java.util.*;
 /**
  *  Compilation:  javac -d bin Utility.java
@@ -92,4 +93,37 @@ public class Utility {
 	public static void closeScanner() {
 		sc.close();
 	}
+	
+	public static String readFile(String filename) throws IOException{
+		FileReader fileReader = new FileReader(filename);
+		BufferedReader bufferedreader = new BufferedReader(fileReader);
+		String line;
+		StringBuilder sb = new StringBuilder();
+		while ((line = bufferedreader.readLine()) != null){
+			sb.append(line);
+		}
+		System.out.println(sb);
+		fileReader.close();
+		bufferedreader.close();
+		return sb.toString();
+	}
+	
+	public static void writeFile(String filename,List<String> items) throws IOException{
+		FileWriter filewriter = new FileWriter(filename);
+		BufferedWriter bw = new BufferedWriter(filewriter);
+		for(String s : items) {
+			filewriter.write(s+" ");
+		}
+		bw.close();
+		filewriter.close();
+	}
+	
+	public static List<Object> arrayToList(Object[] array) {
+		List<Object> list = new LinkedList<Object>();
+		for(Object s : array) {
+			list.add(s);
+		}
+		return list;
+	}
+	
 }
