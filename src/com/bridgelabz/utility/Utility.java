@@ -1,6 +1,8 @@
 package com.bridgelabz.utility;
 import java.io.*;
 import java.util.*;
+
+import com.bridgelabz.datastructure.CustomLinkedList;
 /**
  *  Compilation:  javac -d bin Utility.java
  *  Purpose: Root class Scanner to reuse in other program .
@@ -142,28 +144,28 @@ public class Utility {
 	 * @throws IOException : That is checked exception
 	 */
 	
-	public static void writeFile(String filename,List<String> items) throws IOException{
+	public static void writeFile(String filename,CustomLinkedList items) throws IOException{
 		FileWriter filewriter = new FileWriter(filename);
 		BufferedWriter bw = new BufferedWriter(filewriter);
-		for(String s : items) {
-			filewriter.write(s+" ");
+		for(int i =0 ; i<items.size();i++) {
+			filewriter.write(items.getElement(i)+" ");
 		}
+		System.out.println("File Writted Successfully");
 		bw.close();
 		filewriter.close();
-	}
+	}	
 	
-	/**
-	 * Purpose : Function to convert array to List
-	 * @param array : Passing array as an argument
-	 * @return : Return the list 
-	 */
-	
-	public static List<Object> arrayToList(Object[] array) {
-		List<Object> list = new LinkedList<Object>();
-		for(Object s : array) {
-			list.add(s);
+	public static void print2DArray(String arr[][])
+	{
+		int m=arr.length;
+		int n=arr[0].length;
+		for(int i=0; i<m; i++)
+		{
+			for(int j=0; j<n; j++)
+			{
+				System.out.print(arr[i][j]+" ");
+			}
+			System.out.println("");
 		}
-		return list;
 	}
-	
 }

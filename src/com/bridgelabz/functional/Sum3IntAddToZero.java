@@ -21,7 +21,7 @@ public class Sum3IntAddToZero {
 		boolean found = true; 
 		
 		//Taking array as input
-		
+		System.out.println("Enter the elements ");
 		for(int i=0;i<x;i++) {
 				arr[i]=Utility.inputInteger();
 		}

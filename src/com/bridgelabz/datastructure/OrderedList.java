@@ -1,4 +1,5 @@
 package com.bridgelabz.datastructure;
+
 import com.bridgelabz.utility.Utility;
 
 /**
@@ -8,7 +9,6 @@ import com.bridgelabz.utility.Utility;
  * @since   26-02-2019
  */
 public class OrderedList {
-
 	public static void main(String[] args) throws Exception{
 		String path = "/home/admin1/eclipse-workspace/tasif/bridgelabz/MyProject/src/com/bridgelabz/datastructure/Ordered.txt";
 
@@ -22,5 +22,4 @@ public class OrderedList {
         
         DSUtil.orderedList(number, string);
 	}
-
 }

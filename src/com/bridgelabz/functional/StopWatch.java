@@ -1,7 +1,7 @@
 package com.bridgelabz.functional;
 import com.bridgelabz.utility.Utility;
 /**
- * Purpose : Stopwatch Program for measuring the time that elapses between the start and end clicks
+ * Purpose : Stop watch Program for measuring the time that elapses between the start and end clicks
  * @author : Tasif Mohammed
  * @version : 1.0
  * @since   20-02-2019

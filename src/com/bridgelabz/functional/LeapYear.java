@@ -35,8 +35,11 @@ public class LeapYear {
 		if(count<4) {
 			System.out.println("Enter Year in four digit ");
 		}
+		else if(isLeap(year))  {
+			System.out.println(year + " is Leap Year ");
+		}
 		else {
-			isLeap(year);
+			System.out.println(year + " is not Leap Year ");
 		}
 		
 		//Closing Scanner
@@ -49,7 +52,7 @@ public class LeapYear {
 	 * @param year : Passes year as an argument 
 	 * @return true if year is leap else false 
 	 */
-	static boolean isLeap(int year) {
+	public static boolean isLeap(int year) {
 		if(year % 400 == 0) {
 			return true;
 		}
@@ -61,4 +64,5 @@ public class LeapYear {
 		}
 		return false;
 	}
+
 }

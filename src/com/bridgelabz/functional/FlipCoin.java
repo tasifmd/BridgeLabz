@@ -39,10 +39,10 @@ public class FlipCoin {
 		    	  heads++;
 		      }
 		}
-		double headPer=(double)heads/n*100;
-		System.out.println("Persentage of Heads is "+headPer);
-		double tailPer=(double)tails/n*100;
-		System.out.println("Persentage of Tails is "+tailPer);
+		double head_per=(double)heads/n*100;
+		System.out.println("Persentage of Heads is "+head_per);
+		double tail_per=(double)tails/n*100;
+		System.out.println("Persentage of Tails is "+tail_per);
 
 		//Closing Scanner
 		

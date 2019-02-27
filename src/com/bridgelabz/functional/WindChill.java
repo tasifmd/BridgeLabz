@@ -12,8 +12,10 @@ public class WindChill {
 
 	public static void main(String[] args) {
 	
-		int t = Integer.parseInt(args[0]);
-		double v = Integer.parseInt(args[1]);
+		System.out.println("Enter The Value of Temperature ");
+		int t = Utility.inputInteger();
+		System.out.println("Enter The Value of Wind Speed ");
+		double v = Utility.inputInteger();
 		if(t>50||v>120||v<3) {
 			System.out.println("Formulla is not valid ");
 		}else {

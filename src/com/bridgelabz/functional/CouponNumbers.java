@@ -11,7 +11,7 @@ import com.bridgelabz.utility.*;
 public class CouponNumbers {
 
 	public static void main(String[] args) {
-		System.out.println("Enter the value ");
+		System.out.println("Enter the Distinct Coupon Number ");
 		int x=Utility.inputInteger();
 		int count = collect(x);
         System.out.println("Total random number needed to have all distinct numbers "+count);
@@ -29,7 +29,8 @@ public class CouponNumbers {
 	    int count = 0;                         
 	    int distinct  = 0;                      
 	    while (distinct < n) {
-	    	int value = getCoupon(n);           
+	    	int value = getCoupon(n); 
+	    	//System.out.println(value);
 	        count++;                             
 	        if (!isCollected[value]) {           
 	        	distinct++;
@@ -48,6 +49,7 @@ public class CouponNumbers {
 	
 	    public static int getCoupon(int n) {
 	        return (int) (Math.random() * n);
+	        
 	    }
 
 }

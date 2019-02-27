@@ -58,7 +58,7 @@ public class Gambler {
 	    System.out.println("Percent of games won = " + 100.0 * wins / z);
 	    System.out.println("Avg bets = " + 1.0 * bets / z);
 	    
-	  //Closing Scanner
+	    //Closing Scanner
 	    
 	    Utility.closeScanner();
 	    
