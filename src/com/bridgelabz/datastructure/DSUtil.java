@@ -151,14 +151,14 @@ public class DSUtil {
 		int date=1;
 		int i=0;
 		 
-		System.out.print("\n\t\t "+MonthString[month-1]+"\t "+year);
-		System.out.println("\n\t--------------------------------------------------");
+		System.out.println("\t\t\t "+MonthString[month-1]+"\t "+year);
+		System.out.println("\t--------------------------------------------------");
 		
 		for(int a=0; a<days.length; a++){
 			 System.out.print(" "+days[a]);	
 		}
 		System.out.println();	
-		System.out.println("\n\t--------------------------------------------------");
+		System.out.println("\t--------------------------------------------------");
 		
 		while(i<day){
 			 calender[0][i]="\t";

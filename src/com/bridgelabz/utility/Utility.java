@@ -154,6 +154,14 @@ public class Utility {
 		bw.close();
 		filewriter.close();
 	}	
+	public static int[] stringToIntArray(String[] arr) {
+		int l = arr.length;
+		int[] iarr = new int[l];
+		for(int i = 0 ; i<l ; i++) {
+			iarr[i] = Integer.parseInt(arr[i]);
+		}
+		return iarr;
+	}
 	
 	public static void print2DArray(String arr[][])
 	{
