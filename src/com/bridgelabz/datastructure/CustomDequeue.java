@@ -23,7 +23,7 @@ public class CustomDequeue {
             return;
         }
         //remove an item from the beginning of the queue
-        String rem = deque.remove(0);
+        deque.remove(0);
     }
      
     public void removeRear(){
@@ -32,7 +32,7 @@ public class CustomDequeue {
             return;
         }
         //remove an item from the beginning of the queue
-        String rem = deque.remove(deque.size()-1);
+        deque.remove(deque.size()-1);
     }
      
     public String peakFront(){

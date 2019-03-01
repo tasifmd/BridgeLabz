@@ -11,6 +11,8 @@ public class Calender2DArray {
 		int year = Utility.inputInteger();
 		String calender[][]=DSUtil.getMonthCalender(month,year);
 		Utility.print2DArray(calender);
+		System.out.println("\t-----------------------------------------------------");
+		Utility.closeScanner();
 	}
 
 }

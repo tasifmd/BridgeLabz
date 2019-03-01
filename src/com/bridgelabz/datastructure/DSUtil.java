@@ -1,10 +1,9 @@
 package com.bridgelabz.datastructure;
 
-import java.io.IOException;
-
-import com.bridgelabz.algorithm.Util;
-import com.bridgelabz.functional.LeapYear;
-import com.bridgelabz.utility.Utility;
+import java.io.*;
+import com.bridgelabz.algorithm.*;
+import com.bridgelabz.functional.*;
+import com.bridgelabz.utility.*;
 
 /**
  * Purpose : Utility class to perform different activities 
@@ -35,30 +34,31 @@ public class DSUtil {
 		//Splitting String depending on space 
 		
 		String[] stringArr = purestring.split(" ");
-		CustomLinkedList li = new CustomLinkedList();
+		LinkedList li = new LinkedList();
 		
 		//Adding data into List
 
 		System.out.println("Words of string are");
 		for(String s : stringArr) {
 			System.out.print(s+",");
-			li.add(li,s);
+			li.insertAtLast(s);
 		}
 		
 		//Searching the word if available remove it from list
+		System.out.println("List Value ");
 		
-		if(li.isAvailable(li.head,searchWord)) {
+		if(li.search(searchWord)) {
 			System.out.println("\nThe word is available in the linked list , remove it ");
-			li.remove(li,searchWord);
-			li.printList(li);
+			li.delete(searchWord);
+			li.show();
 		}
 		
 		//Searching the word if not available add it to list
 		
 		else {
 			System.out.println("\nThe word is not available in the linked list , add it ");
-			li.add(li,searchWord);
-			li.printList(li);
+			li.insertAtLast(searchWord);
+			li.show();
 		}
 		
 		//Writting data into the file 
@@ -81,36 +81,37 @@ public class DSUtil {
 		//Splitting String depending on space 
 		
 		String[] stringArr = fullString.split(" ");
-		CustomLinkedList list = new CustomLinkedList();
+		LinkedList list = new LinkedList();
 		System.out.println("Numbers in file are ");
 		
 		//Adding data into List
 		
 		for(String s : stringArr) {
 			System.out.print(s + "\t");
-			list.add(list, s);
+			list.insertAtLast(s);
+			list.sortList();
 		}
 		
 		//Searching the word if available remove it from list
 		
-		if(list.isAvailable(list.head,searchNumber)) {
-			System.out.println("\nThe number is available in the linked list , remove it ");
-			list.remove(list,searchNumber);
-			
-			//Sorting the elements of list 
-			
-			//Collections.sort(list);
-			list.printList(list);
-		} else {
-			System.out.println("\nThe number is not available in the linked list , add it ");
-			list.add(list,searchNumber);
-			
-			//Sorting the elements of list 
-			
-			//Collections.sort(list);
-			list.printList(list);
+		//Searching the word if available remove it from list
+		System.out.print("\nList is " );
+		list.show();
+		System.out.println();
+		if(list.search(searchNumber)) {
+			System.out.println("\nThe word is available in the linked list , remove it ");
+			list.delete(searchNumber);
+			list.show();
 		}
-		
+				
+		//Searching the word if not available add it to list
+				
+		else {
+			System.out.println("\nThe word is not available in the linked list , add it ");
+			list.insertAtLast(searchNumber);
+			list.sortList();
+			list.show();
+		}
 		//Writting data into the file 
 		
 		Utility.writeFile(path, list);
@@ -150,15 +151,15 @@ public class DSUtil {
 		String calender[][]= new String[weeks][days.length];
 		int date=1;
 		int i=0;
-		 
+		System.out.println("\t-----------------------------------------------------");
 		System.out.println("\t\t\t "+MonthString[month-1]+"\t "+year);
-		System.out.println("\t--------------------------------------------------");
+		System.out.println("\t-----------------------------------------------------");
 		
 		for(int a=0; a<days.length; a++){
 			 System.out.print(" "+days[a]);	
 		}
 		System.out.println();	
-		System.out.println("\t--------------------------------------------------");
+		System.out.println("\t-----------------------------------------------------");
 		
 		while(i<day){
 			 calender[0][i]="\t";

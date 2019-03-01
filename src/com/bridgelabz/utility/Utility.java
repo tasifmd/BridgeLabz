@@ -1,8 +1,12 @@
 package com.bridgelabz.utility;
-import java.io.*;
-import java.util.*;
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.FileReader;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.util.Scanner;
 
-import com.bridgelabz.datastructure.CustomLinkedList;
+import com.bridgelabz.datastructure.LinkedList;
 /**
  *  Compilation:  javac -d bin Utility.java
  *  Purpose: Root class Scanner to reuse in other program .
@@ -144,8 +148,19 @@ public class Utility {
 	 * @throws IOException : That is checked exception
 	 */
 	
-	public static void writeFile(String filename,CustomLinkedList items) throws IOException{
+	public static void writeFile(String filename,LinkedList items) throws IOException{
 		FileWriter filewriter = new FileWriter(filename);
+		BufferedWriter bw = new BufferedWriter(filewriter);
+		for(int i =0 ; i<items.size();i++) {
+			filewriter.write(items.getElement(i)+" ");
+		}
+		System.out.println("\nFile Writted Successfully");
+		bw.close();
+		filewriter.close();
+	}	
+	
+	public static void writeFileWithOutOverWriting(String filename,LinkedList items) throws IOException{
+		FileWriter filewriter = new FileWriter(filename,true);
 		BufferedWriter bw = new BufferedWriter(filewriter);
 		for(int i =0 ; i<items.size();i++) {
 			filewriter.write(items.getElement(i)+" ");
@@ -154,6 +169,7 @@ public class Utility {
 		bw.close();
 		filewriter.close();
 	}	
+	
 	public static int[] stringToIntArray(String[] arr) {
 		int l = arr.length;
 		int[] iarr = new int[l];
@@ -164,6 +180,20 @@ public class Utility {
 	}
 	
 	public static void print2DArray(String arr[][])
+	{
+		int m=arr.length;
+		int n=arr[0].length;
+		for(int i=0; i<m; i++)
+		{
+			for(int j=0; j<n; j++)
+			{
+				System.out.print(arr[i][j]+" ");
+			}
+			System.out.println("");
+		}
+	}
+	
+	public static void print2DArray(int arr[][])
 	{
 		int m=arr.length;
 		int n=arr[0].length;

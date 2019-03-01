@@ -1,8 +1,9 @@
 package com.bridgelabz.datastructure;
 
 public class CustomQueue{
-	 protected int Queue[] ;
-	    protected int front, rear, size, len;
+	    int Queue[] ;
+	    String que[];
+	    int front, rear, size, len;
 	 
 	    /* Constructor */
 	    public CustomQueue(int n) 
@@ -35,7 +36,7 @@ public class CustomQueue{
 	           System.out.println("Queue is empty");
 	        return Queue[front];
 	    }    
-	    /*  Function to insert an element to the queue */
+	    /*  Function to insert int element to the queue */
 	    public void insert(int i) 
 	    {
 	        if (rear == -1) 
@@ -83,6 +84,6 @@ public class CustomQueue{
 	        for (int i = front; i <= rear; i++)
 	            System.out.print(Queue[i]+" ");
 	        System.out.println();        
-	    }
+	    } 
 
 } 
