@@ -36,7 +36,7 @@ public class Anagram {
 	  *@return true if strings are anagram else false
 	  **/
 	
-	private static boolean isAnagram(String s1, String s2) {
+	public static boolean isAnagram(String s1, String s2) {
 		s1 = s1.replaceAll(" ", "");
 		s2 = s2.replaceAll(" ", "");
 		if(s1.length()!=s2.length()) {

@@ -1,8 +1,8 @@
 package com.bridgelabz.datastructure;
 import java.util.ArrayList;
 
-import com.bridgelabz.functional.FUtil;
-import com.bridgelabz.utility.Utility;
+import com.bridgelabz.functional.*;
+import com.bridgelabz.utility.*;
 
 public class Prime2DArray {
 
