@@ -139,6 +139,12 @@ public class DSUtil {
 		return st.isEmpty();
 	}
 	
+	/**
+	 * Purpose : prints the Calendar of the month.
+	 * @param month : Passing month as an argument 
+	 * @param year : Passing year as an argument 
+	 * @return the calender as 2D Array
+	 */
 	static String[][] getMonthCalender(int month, int year){
 		String []days = {"\t Sun","\t Mon","\tTue", "\t Wed","\tThu", "\t Fri", "\tSat"};
 		int day = Util.dayOfWeek(1, month, year);
