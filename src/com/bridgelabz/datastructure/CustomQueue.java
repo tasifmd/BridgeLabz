@@ -49,7 +49,7 @@ public class CustomQueue{
 	        	 System.out.println("Queue is full ! overflow");
 	        else if ( rear + 1 < size)
 	            Queue[++rear] = i;    
-	        len++ ;    
+	        len++ ; 
 	    }    
 	    /*  Function to remove front element from the queue */
 	    public int remove() 

@@ -106,6 +106,7 @@ public class Utility {
 	 * @return : data of file as a string 
 	 * @throws IOException
 	 */
+	
 	public static String readFile(String filename) throws IOException{
 		
 		//Creating FileReader Object
@@ -159,6 +160,12 @@ public class Utility {
 		filewriter.close();
 	}	
 	
+	/**
+	 * Purpose : Function to write data into the file with out over writing the existing text 
+	 * @param filename : Passing file name as an argument 
+	 * @param items : Passing LinkedList object as an argument 
+	 * @throws IOException
+	 */
 	public static void writeFileWithOutOverWriting(String filename,LinkedList items) throws IOException{
 		FileWriter filewriter = new FileWriter(filename,true);
 		BufferedWriter bw = new BufferedWriter(filewriter);
@@ -170,6 +177,12 @@ public class Utility {
 		filewriter.close();
 	}	
 	
+	/**
+	 * Purpose : Function to conver String array into int array
+	 * @param arr : Passing String array as an argument
+	 * @return the converted int array
+	 */
+	
 	public static int[] stringToIntArray(String[] arr) {
 		int l = arr.length;
 		int[] iarr = new int[l];
@@ -178,6 +191,11 @@ public class Utility {
 		}
 		return iarr;
 	}
+	
+	/**
+	 * Purpose : Function to print 2D Array
+	 * @param arr : Passing the String Array as an argument
+	 */
 	
 	public static void print2DArray(String arr[][])
 	{
@@ -193,6 +211,10 @@ public class Utility {
 		}
 	}
 	
+	/**
+	 * Purpose : Function to print 2D Array
+	 * @param arr : Passing int array as an argument
+	 */
 	public static void print2DArray(int arr[][])
 	{
 		int m=arr.length;

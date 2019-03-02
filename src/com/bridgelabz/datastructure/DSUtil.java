@@ -192,6 +192,12 @@ public class DSUtil {
 	 
 	}
 	
+	/**
+	 * Purpose : Function to get prime number as a list
+	 * @param m : Passing lower limit m as an argument
+	 * @param n : Passing higher limit n as an argument
+	 * @return the prime number as a list
+	 */
 	public static List<Integer> primeNumbers(int m,int n) {
 		List<Integer> lst=new ArrayList<Integer>();
 		int temp;
@@ -221,6 +227,12 @@ public class DSUtil {
 		return lst;
 	}
 	
+	/**
+	 * Purpose : Function to get anagram number as a Set
+	 * @param primeList : Passing list object as an argument
+	 * @return the anagram number as a Set
+	 */
+	
 	public static Set<Integer> primeAnagram(List<Integer> primeList) {
 		Set<Integer> primeAnagramSet=new HashSet<>();
 		for(int i=0;i<primeList.size();i++) {
@@ -232,6 +244,12 @@ public class DSUtil {
 		return primeAnagramSet;
 	}
 	
+	/**
+	 * Purpose : Function to check a String is anagram or not 
+	 * @param word : Passing the word to check whether it is anagram or not  
+	 * @param anagram : Passing the another String with whom anagram to be checked
+	 * @return boolean value after checking is done 
+	 */
 	public static boolean isAnagram(String word, String anagram) {
         boolean isAnagram = false;
         if (word != null && anagram != null && word.length() == anagram.length()) {
@@ -250,6 +268,11 @@ public class DSUtil {
         return isAnagram;
     }
 	
+	/**
+	 * Purpose : Function to check Prime And Anagram
+	 * @param primeList : Passing List object as an argument
+	 * @return prime and anagram number as queue
+	 */
 	public static CustomQueue primeAnagramQue(List<Integer> primeList) {
 		Set<Integer> primeAnagram = new HashSet<>();
 		for (int i = 0; i < primeList.size(); i++) {
