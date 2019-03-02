@@ -21,5 +21,9 @@ public class OrderedList {
         //Calling unOrderedList of DSUtil class 
         
         DSUtil.orderedList(number, string);
+        
+        //Closing Scaner
+        
+        Utility.closeScanner();
 	}
 }

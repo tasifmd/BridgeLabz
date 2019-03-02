@@ -2,6 +2,12 @@ package com.bridgelabz.datastructure;
 
 import com.bridgelabz.utility.Utility;
 
+/**
+ * Purpose : Program to generate Binary Search Tree
+ * @author : Tasif mohammed
+ * @since : 28-02-2019
+ * @version : 1.0
+ */
 public class BinarySearchTree {
 
 	public static void main(String[] args) {
@@ -24,13 +30,18 @@ public class BinarySearchTree {
          }
 	}
 	
+	/**
+	 * Purpose : To find the binary count 
+	 * @param n passing number ar argument 
+	 * @return : count 
+	 */
 	public static double binaryCount(double n) {
 		double c = binomialCoeff(2 * n, n);
 		double count = c / (n + 1);
 		return count;
 	}
 	/**
-	 * to find out binomial co-efficient of number
+	 * Purpose : To find out binomial co-efficient of number
 	 * @param n double type number
 	 * @param k double type number
 	 * @return double type result

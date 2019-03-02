@@ -4,12 +4,19 @@ import com.bridgelabz.algorithm.Util;
 import com.bridgelabz.functional.LeapYear;
 import com.bridgelabz.utility.Utility;
 
+/**
+ * Purpose : Create the Week Object having a list of WeekDay objects each storing the day (i.e S,M,T,W,Th,..) and the Date (1,2,3..) . The WeekDay objects are stored in a Queue implemented using Linked List. Further maintain also a Week Object in a Queue to finally display the Calendar
+ * @author : Tasif Mohammed
+ * @since : 28-02-2019
+ * @version : 1.0
+ */
+
 public class CalenderQueue {
 	
-	/*
-	* The main function is to take the input from the user 
-	* and printing the calendar by using queue 
-	*/
+	/**
+	 * The main function is to take the input from the user 
+	 * and printing the calendar by using queue 
+	 */
 	public static void main(String[] args) {
 		System.out.println("Enter the month ");
 		int month = Utility.inputInteger();
@@ -49,7 +56,7 @@ public class CalenderQueue {
 			}
 			System.out.println();
 		}
-
+		System.out.println("---------------------------------------------------");
 }
 
 }

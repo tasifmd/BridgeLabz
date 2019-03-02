@@ -8,11 +8,17 @@ import com.bridgelabz.utility.*;
  * @version 1.0
  * @since   27-02-2019
  */
+
 public class BalancedParanthesis {
 	
 		public static void main(String[] args) {
 			System.out.println("Enter the expression ");
+			
+			//Taking expression as an input
+			
 			String expression = Utility.inputSingleString();
+			
+			//Checking if expression is balanced 
 			
 			boolean status = DSUtil.check(expression);
 			if(status) {
@@ -21,6 +27,9 @@ public class BalancedParanthesis {
 			else {
 				System.out.println("The expression is not balanced");
 			}
+			
+			//Clossing Scanner
+			
 			Utility.closeScanner();
 		}
 

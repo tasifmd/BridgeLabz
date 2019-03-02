@@ -2,6 +2,13 @@ package com.bridgelabz.datastructure;
 
 import com.bridgelabz.utility.Utility;
 
+/**
+ * Purpose : Create Banking Cash Counter where people come in to deposit Cash and withdraw Cash
+ * @author : Tasif Mohammed
+ * @version : 1.0
+ * @since : 27-02-2019
+ */
+
 public class BankingCashCounter {
 
 	public static void main(String[] args) {
@@ -10,8 +17,12 @@ public class BankingCashCounter {
 		int cash_count=10000;
 		do {
 			System.out.println("Enter the choice");
+			
+			//Taking input of user choice to do specific task 
+			
 			System.out.println("1:Add  2:Check Cash  3:Exit");
 			int choice = Utility.inputInteger();
+			
 			switch(choice){
 				case 1:
 					cq.insert(count++);
@@ -51,6 +62,7 @@ public class BankingCashCounter {
 			}
 		}while(cash_count!=0);
 		System.out.println("Out of cash");
+		Utility.closeScanner();
 	}
 
 }

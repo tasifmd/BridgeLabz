@@ -1,5 +1,11 @@
 package com.bridgelabz.datastructure;
 import com.bridgelabz.utility.*;
+/**
+ * Puspose : Create a Slot of 10 to store Chain of Numbers that belong to each Slot to efficiently search a number from a given set of number
+ * @author : Tasif Mohammed
+ * @version : 1.0
+ * @since : 27-02-2019
+ */
 public class HashingFunction {
 	
 	public static void main(String[] args) throws Exception{
@@ -51,6 +57,10 @@ public class HashingFunction {
 			}
 			Utility.writeFileWithOutOverWriting(writepath, numberlist[i]);
 		}
+		
+		//Closing Scanner 
+		
+		Utility.closeScanner();
 	}
 
 }
