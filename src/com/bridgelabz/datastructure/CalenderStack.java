@@ -4,11 +4,10 @@ import com.bridgelabz.algorithm.Util;
 import com.bridgelabz.functional.LeapYear;
 import com.bridgelabz.utility.Utility;
 
-public class CalenderQueue {
-	
+public class CalenderStack {
 	/*
 	* The main function is to take the input from the user 
-	* and printing the calendar by using queue 
+	* and printing the calendar by using queue and stacks 
 	*/
 	public static void main(String[] args) {
 		System.out.println("Enter the month ");
@@ -25,31 +24,31 @@ public class CalenderQueue {
 		System.out.println("---------------------------------------------------");
 		System.out.println("Sun     Mon     Tue     Wed     Thu     Fri    Sat ");
 		System.out.println("---------------------------------------------------");
-		int dayofWeek = Util.dayOfWeek(1, month, year);
-		QueueLinkedList<QueueLinkedList<Integer>> queue=new QueueLinkedList<QueueLinkedList<Integer>>();
-		QueueLinkedList<Integer> refqueue=new QueueLinkedList<Integer>();
-		
-		
+		int dayofWeek = Util.dayOfWeek(month, 1, year);
+		StackLinkedList<QueueLinkedList<Integer>> stack=new StackLinkedList<>();
+		QueueLinkedList<Integer> refqueue=new QueueLinkedList<>();
 		for (int i = 1; i <= days[month]; i++) {
 			refqueue.insert(i);
 			if (((i + dayofWeek) % 7 == 0 || i==days[month]) ) {
-				queue.insert(refqueue);
+				stack.push(refqueue);
 				refqueue=new QueueLinkedList<Integer>();
 				continue;
 			}
 		}	
 		for (int i = 0; i < dayofWeek; i++)
 		System.out.print("\t");
-		for(int i=0;i<=queue.getSize();i++)
-		{
-			QueueLinkedList<Integer> week=queue.remove();
-			for(int j=0;j<week.getSize();j++)
-			{
-				System.out.print(week.remove()+"\t");
-			}
-			System.out.println();
+		int size = stack.getSize();
+		StackLinkedList<QueueLinkedList<Integer>> stackNew = new StackLinkedList<>();
+		
+		for(int i=0; i < size; i++){
+			stackNew.push(stack.pop());
 		}
 
-}
-
+		for (int i = 0; i < size; i++) {
+			QueueLinkedList<Integer> week = stackNew.pop();
+			for (int j = 0; j < week.getSize(); j++) {
+				System.out.print(week.remove() + "\t");
+			}
+			System.out.println();
+		}}
 }
