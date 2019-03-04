@@ -101,7 +101,7 @@ public class DSUtil {
 		list.show();
 		System.out.println();
 		if(list.search(searchNumber)) {
-			System.out.println("\nThe word is available in the linked list , remove it ");
+			System.out.println("\nThe number is available in the linked list , remove it ");
 			list.delete(searchNumber);
 			list.show();
 		}
@@ -109,7 +109,7 @@ public class DSUtil {
 		//Searching the word if not available add it to list
 				
 		else {
-			System.out.println("\nThe word is not available in the linked list , add it ");
+			System.out.println("\nThe number is not available in the linked list , add it ");
 			list.insertAtLast(searchNumber);
 			list.sortList();
 			list.show();
@@ -129,7 +129,7 @@ public class DSUtil {
 		CustomStack<Character> st = new CustomStack<>();
 		for (int i = 0; i < s.length(); i++) {
 			/*
-			 * push open parenthesis “(“ and pop closed parenthesis “)”. At the End of the
+			 * push open parenthesis â€œ(â€œ and pop closed parenthesis â€œ)â€�. At the End of the
 			 * Expression if the Stack is Empty then the Arithmetic Expression is Balanced.
 			 */
 			char c = s.charAt(i);

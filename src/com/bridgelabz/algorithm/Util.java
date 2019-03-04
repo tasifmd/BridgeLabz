@@ -136,4 +136,50 @@ public class Util {
 	}
 	
 	
+	/**
+	 * Purpose : Padd the string 
+	 * @param number : to be padded
+	 * @return : the padded number
+	 */
+	public static String paddedString(int number) {
+		int i = 2;
+		String returnString = "";
+		String plusCharacter = "";
+		while(number > 0) {
+			if ((number / i) == 0) {
+				if(returnString.length() != 0) {
+					plusCharacter = " + ";
+				}
+				returnString = returnString + plusCharacter + (i/2);
+				number -= (i/2);
+				i = 2;
+			}
+			else if(number == 1){
+				return returnString + " + 1";
+			} else {
+				i *= 2;
+			}
+		}
+		return returnString;
+	}
+	
+	/**
+	 * Purpose : Check a number is prime or not 
+	 * @param num : Passing the number to checked
+	 * @return : the count 
+	 */
+	public static int prime(int num) {
+		int cnt=0;
+		for(int i=2;i<num;i++)
+		{
+			if(num%i==0)
+			{
+				cnt++;
+				break;
+			}	
+		}
+			return cnt;	
+	}
+	
 }
+

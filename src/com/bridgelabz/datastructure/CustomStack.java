@@ -1,7 +1,7 @@
 package com.bridgelabz.datastructure;
 
 /**
- * Purpose : Stack Class to push open parenthesis “(“ and pop closed parenthesis “)”
+ * Purpose : Stack Class to push open parenthesis â€œ(â€œ and pop closed parenthesis â€œ)â€�
  * @author Tasif Mohammed
  * @author Tasif Mohammed
  * @version 1.0

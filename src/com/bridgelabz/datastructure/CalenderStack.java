@@ -4,11 +4,13 @@ import com.bridgelabz.algorithm.Util;
 import com.bridgelabz.functional.LeapYear;
 import com.bridgelabz.utility.Utility;
 
+/**Purpose : takes the month and year as command-line arguments and prints the Calendar of the month. Store the Calendar in an 2D Array, the first dimension the week of the month and the second dimension stores the day of the week
+ * @author : Tasif Mohammed
+ * @version : 1.0
+ * @since : 28-2-2019
+ */
 public class CalenderStack {
-	/*
-	* The main function is to take the input from the user 
-	* and printing the calendar by using queue and stacks 
-	*/
+
 	public static void main(String[] args) {
 		System.out.println("Enter the month ");
 		int month = Utility.inputInteger();
@@ -24,7 +26,7 @@ public class CalenderStack {
 		System.out.println("---------------------------------------------------");
 		System.out.println("Sun     Mon     Tue     Wed     Thu     Fri    Sat ");
 		System.out.println("---------------------------------------------------");
-		int dayofWeek = Util.dayOfWeek(month, 1, year);
+		int dayofWeek = Util.dayOfWeek(1, month, year);
 		StackLinkedList<QueueLinkedList<Integer>> stack=new StackLinkedList<>();
 		QueueLinkedList<Integer> refqueue=new QueueLinkedList<>();
 		for (int i = 1; i <= days[month]; i++) {
