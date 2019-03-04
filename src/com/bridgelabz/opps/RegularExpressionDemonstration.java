@@ -17,6 +17,8 @@ public class RegularExpressionDemonstration {
 				"Please,let us know in case of any clarification Thank you BridgeLabz xx/xx/xxxx";
 		System.out.println("Enter your full name ");
 		String uname = Utility.inputString();
+		
+		
 		String[] arr = uname.split(" ");
 		String firstname = arr[0];
 		String str1 = str.replace("<<full name>>", uname);

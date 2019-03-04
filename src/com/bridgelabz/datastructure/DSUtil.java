@@ -114,6 +114,7 @@ public class DSUtil {
 			list.sortList();
 			list.show();
 		}
+		list.sortList();
 		//Writting data into the file 
 		
 		Utility.writeFile(path, list);
