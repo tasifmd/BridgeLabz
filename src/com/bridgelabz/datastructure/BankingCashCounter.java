@@ -15,6 +15,8 @@ public class BankingCashCounter {
 		CustomQueue cq = new CustomQueue(20);
 		int count=0;
 		int cash_count=10000;
+		
+		label :
 		do {
 			System.out.println("Enter the choice");
 			
@@ -28,6 +30,8 @@ public class BankingCashCounter {
 					cq.insert(count++);
 					
 					System.out.println("Adding "+count+" person to the queue");
+					
+					
 					System.out.println("Do you want to: 1-Deposit 2-Withdraw");
 					int ch=Utility.inputInteger();
 					switch(ch){
@@ -42,6 +46,7 @@ public class BankingCashCounter {
 							int withdraw=Utility.inputInteger();
 							if(withdraw>cash_count){
 								System.out.println("Cash of that amount is not available");
+								continue label;
 							}
 							else{
 								cash_count-=withdraw;

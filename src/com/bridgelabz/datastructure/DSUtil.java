@@ -111,13 +111,14 @@ public class DSUtil {
 		else {
 			System.out.println("\nThe number is not available in the linked list , add it ");
 			list.insertAtLast(searchNumber);
-			list.sortList();
+			String[] array = listToArray(list);
+			list = arrayToList(array);
 			list.show();
 		}
-		list.sortList();
+		//list.sortList();
 		//Writting data into the file 
 		
-		Utility.writeFile(path, list);
+		Utility.writeFile(path,list);
 	}
 	
 	/**
@@ -285,5 +286,21 @@ public class DSUtil {
 			}
 		}
 		return (CustomQueue) primeAnagram;
+	}
+	
+	public static String[] listToArray(LinkedList list) {
+		String[] arr = new String[list.size()];
+		for (int i = 0 ; i<list.size() ; i++ )
+			arr[i] = list.getElement(i);
+		Arrays.parallelSort(arr);
+		return arr;
+	}
+	
+	public static LinkedList arrayToList(String[] array) {
+		LinkedList list = new LinkedList();
+		for(String str : array) {
+			list.insertAtLast(str);
+		}
+		return list;
 	}
 }
